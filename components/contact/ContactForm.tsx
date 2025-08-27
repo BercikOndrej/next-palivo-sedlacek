@@ -24,6 +24,7 @@ const formSchema = z.object({
 })
 
 const inputBgStyle = 'bg-gray-50';
+const flexStyle = 'flex flex-col gap-x-4 gap-y-8 sm:flex-row w-full'
 
 const ContactForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -49,7 +50,7 @@ const ContactForm = () => {
       <h3 className="font-semibold text-2xl text-black">Kontaktujte nás</h3>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <div className="flex gap-4 md:gap-8 w-full">
+          <div className={flexStyle}>
             <FormField
               control={form.control}
               name="name"
@@ -75,7 +76,7 @@ const ContactForm = () => {
               )}
             />
           </div>
-          <div className="flex gap-8 w-full">
+          <div className={flexStyle}>
             <FormField
               control={form.control}
               name="email"

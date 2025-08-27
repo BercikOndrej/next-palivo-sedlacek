@@ -1,6 +1,6 @@
 const GoogleMap = () => {
   return (
-    <map>
+    <map className="w-full md:col-span-2">
       <iframe
       className="w-full"
       title="Mapa"
