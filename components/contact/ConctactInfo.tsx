@@ -4,7 +4,7 @@ import { LuClock3 } from "react-icons/lu";
 import { LuMail } from "react-icons/lu";
 import { LuPhone } from "react-icons/lu";
 
-const commonStyle = 'group w-max flex gap-8 items-center hover:text-primary hover:gap-12 duration-300 transform';
+const commonStyle = 'group text-black w-max flex gap-8 items-center hover:text-primary hover:gap-12 duration-300 transform';
 const iconStyle = 'group-hover:scale-110 duration-300 transform'
 const ICON_SIZE = 42;
 const textStyle = 'text-xl font-semibold group-hover:text-primary duration-300 transform';
