@@ -13,15 +13,9 @@ import {
 import { Input } from "@/components/ui/input"
 import { Button } from "../ui/button";
 import { Textarea } from "../ui/textarea";
-
-const formSchema = z.object({
-  name: z.string().min(2 , { message: 'pole musí obsahovat alespoň 2 znaky'}).max(255, { message: 'pole může obsahovat maximálně 255 znaků'}),
-  surname: z.string().min(2, { message: 'pole musí obsahovat alespoň 2 znaky'}).max(255, { message: 'pole může obsahovat maximálně 255 znaků'}),
-  email: z.email({ message: 'neplatná emailová adresa'}),
-  phone: z.string().refine(v => validator.isMobilePhone(v, 'any'), { message: 'neplatné tel. číslo'}),
-  subject: z.string().max(255, { message: 'pole může obsahovat maximálně 255 znaků'}),
-  message: z.string().min(1, { message: 'pole je povinné'}).max(1024, { message: 'pole může obsahovat maximálně 1024 znaků'})
-})
+import { formSchema } from "@/utils/validation-schemas";
+import { toast } from "sonner";
+import easyTranslate from "@/utils/easy-translate";
 
 const inputBgStyle = 'bg-gray-50';
 const flexStyle = 'flex flex-col gap-x-4 gap-y-8 sm:flex-row w-full'
@@ -39,10 +33,32 @@ const ContactForm = () => {
     }
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values)
+    try {
+      const res = await fetch('/api/message', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          ...values
+        })
+      });
+      if (res.ok) {
+        toast.success('Zpráva byla úspěšně odeslána!', {
+        })
+      }
+      else {
+        const errors = await res.json();
+        toast.error('Zpráva se bohužel neodeslala.', {
+          description: `${easyTranslate(errors[0].path)}: ${errors[0].message}`,
+        })
+      }
+    }
+    catch (err) {
+      console.log(err);
+    }
   }
 
   return (

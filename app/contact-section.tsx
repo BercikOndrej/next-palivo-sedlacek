@@ -1,7 +1,7 @@
-import ConctactInfo from '@/components/contact/ConctactInfo'
-import ContactForm from '@/components/contact/ContactForm'
-import GoogleMap from '@/components/contact/GoogleMap'
-import SectionTitle from '@/components/SectionTitle'
+import ConctactInfo from '@/components/contact/conctac-info'
+import ContactForm from '@/components/contact/contact-form'
+import GoogleMap from '@/components/contact/google-map'
+import SectionTitle from '@/components/section-title'
 import React from 'react'
 
 const ContactSection = () => {

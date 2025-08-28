@@ -1,4 +1,4 @@
-import ContactSection from "./ContactSection";
+import ContactSection from "./contact-section";
 
 export default function Home() {
   return <div>
