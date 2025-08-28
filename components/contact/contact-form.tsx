@@ -1,6 +1,5 @@
 'use client';
 import z from "zod";
-import validator from 'validator';
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form";
 import {
@@ -29,7 +28,8 @@ const ContactForm = () => {
       email: '',
       phone: '',
       subject: 'Poptávka',
-      message: ''
+      message: '',
+      honeyPod: ''
     }
   });
 
@@ -136,6 +136,18 @@ const ContactForm = () => {
             name="message"
             render={({ field }) => (
               <FormItem>
+                <FormControl className={inputBgStyle}>
+                  <Textarea className="h-24" placeholder="Zpráva" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+           <FormField
+            control={form.control}
+            name="honeyPod"
+            render={({ field }) => (
+              <FormItem className="hidden">
                 <FormControl className={inputBgStyle}>
                   <Textarea className="h-24" placeholder="Zpráva" {...field} />
                 </FormControl>
