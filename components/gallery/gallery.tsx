@@ -1,3 +1,5 @@
+'use client';
+
 import { AspectRatio } from '@radix-ui/react-aspect-ratio';
 import Image from 'next/image';
 import { PhotoProvider, PhotoView } from "react-photo-view";
@@ -16,7 +18,7 @@ const Gallery = () => {
                 src={`/gallery/capka${num}.webp`}
                 alt="Ukázkové foto"
                 fill
-                className="rounded-md object-cover group-hover:scale-110 transform duration-300" />
+                className="rounded-md object-cover group-hover:scale-125 transform duration-300" />
               </AspectRatio>
             </PhotoView>
           ))}
