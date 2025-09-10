@@ -3,7 +3,7 @@ import SectionTitle from '../section-title'
 
 const AboutInfo = () => {
   return (
-    <div className='space-y-4'>
+    <div className='space-y-4 lg:w-2/3'>
       <SectionTitle title='O nás' />
       <p>
         Jsme regionální firma s více jak 20 letou tradicí. Zabývající se výrobou a prodejem zejména suchého kvalitního palivového dříví. Nabízíme měkké a tvrdé listnaté dříví v délkách dle vašich požadavků. S výběrem ideálního druhu dřeva Vám rádi poradíme. Po telefonické domluvě Vás rádi uvítáme i mimo otevírací dobu.
