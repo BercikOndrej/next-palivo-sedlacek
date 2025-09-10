@@ -18,18 +18,16 @@ const PriceListSection = () => {
   })
 
   return (
-    <div>
-      <section className='w-full py-8 p-4 md:p-8 bg-bg-color'>
-        <div className='"w-full mx-auto max-w-6xl flex flex-col gap-8'>
-          <div>
-            <SectionTitle title='Ceník' />
-            <h3 className='text-primary font-bold text-2xl'>Suchého palivového dříví</h3>
-            <p>Naše dřevo je v suchém stavu k okamžitému použití</p>
-          </div>
-          <PriceList data={data} />
+    <section className='w-full py-8 p-4 md:p-8 bg-bg-color'>
+      <div className='w-full mx-auto max-w-6xl flex flex-col gap-8'>
+        <div>
+          <SectionTitle title='Ceník' />
+          <h3 className='text-primary font-bold text-2xl'>Suchého palivového dříví</h3>
+          <p>Naše dřevo je v suchém stavu k okamžitému použití</p>
         </div>
-      </section>
-    </div>
+        <PriceList data={data} />
+      </div>
+    </section>
   )
 }
 
