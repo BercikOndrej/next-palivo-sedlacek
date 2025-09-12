@@ -34,7 +34,6 @@ const ContactForm = () => {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values)
     try {
       const res = await fetch('/api/message', {
         method: 'POST',
@@ -55,6 +54,7 @@ const ContactForm = () => {
           description: `${easyTranslate(errors[0].path)}: ${errors[0].message}`,
         })
       }
+      form.reset();
     }
     catch (err) {
       console.log(err);
