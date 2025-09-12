@@ -18,7 +18,7 @@ const PriceListSection = () => {
   })
 
   return (
-    <section className='w-full py-8 p-4 md:p-8 bg-bg-color'>
+    <section className='w-full py-8 p-4 md:p-8 bg-bg-color' id='section--price-list'>
       <div className='w-full mx-auto max-w-6xl flex flex-col gap-8'>
         <div>
           <SectionTitle title='Ceník' />

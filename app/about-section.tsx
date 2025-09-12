@@ -3,7 +3,7 @@ import AboutInfo from "@/components/about/about-info"
 
 const AboutSection = () => {
   return (
-    <section className='w-full  bg-bg-color py-8 p-4 md:p-8'>
+    <section className='w-full bg-bg-color py-8 p-4 md:p-8' id="section--about">
       <div className='w-full mx-auto max-w-6xl flex flex-col lg:flex-row gap-8'>
         <AboutImages />
         <AboutInfo />

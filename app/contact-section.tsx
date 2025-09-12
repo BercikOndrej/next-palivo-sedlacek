@@ -6,7 +6,7 @@ import React from 'react'
 
 const ContactSection = () => {
   return (
-    <section className='w-full  bg-bg-color py-8 p-4 md:p-8'>
+    <section className='w-full  bg-bg-color py-8 p-4 md:p-8' id='section--contact'>
       <div className='"w-full mx-auto max-w-6xl'>
         <SectionTitle title='Kontakt'/>
         <div className='gap-8 grid grid-cols-1 md:grid-cols-2'>
