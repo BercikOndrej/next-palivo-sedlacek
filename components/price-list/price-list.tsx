@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 import Image from 'next/image';
 import piliny from '@/public/price-list/cenik-piliny.webp'
 import doprava from '@/public/price-list/cenik-doprava.jpg'
+import paleta from '@/public/price-list/cenik-paleta.webp'
 
 
 interface Props {
@@ -19,11 +20,12 @@ const PriceList = ({data}: Props) => {
         <WoodCard state={'loose'} wood={wood} />
       </Fragment>
       )}
+      {/* Piliny */}
       <Card className="pt-0">
         <div className="w-full group overflow-clip rounded-t-md">
           <Image 
           src={piliny}
-          alt="Foto uskupení dřevin"
+          alt="Foto pilin"
           className="rounded-t-md object-cover group-hover:scale-110 transform duration-300"
           />
         </div>
@@ -42,11 +44,36 @@ const PriceList = ({data}: Props) => {
           </div>
         </CardContent>
       </Card>
+      {/* Paleta */}
+      <Card className="pt-0">
+        <div className="w-full group overflow-clip rounded-t-md">
+          <Image 
+          src={paleta}
+          alt="Foto palety"
+          className="rounded-t-md object-cover group-hover:scale-110 transform duration-300"
+          />
+        </div>
+        <CardHeader>
+          <CardTitle className="text-primary font-bold text-lg">Paleta</CardTitle>
+          <CardDescription>Připočítává se k celkové ceně dříví</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div className="w-full grid grid-cols-2 grid-rows-2 gap-4">
+            <span className="font-bold text-black col-1 row-1">Míra</span>
+            <span className="font-bold text-black col-2 row-1">Cena</span>
+
+            <span className="row-2 col-1">1 kus</span>
+            <span className="row-2 col-2">400 Kč</span>
+
+          </div>
+        </CardContent>
+      </Card>
+      {/* Doprava */}
       <Card className="pt-0">
         <div className="w-full group overflow-clip rounded-t-md">
           <Image 
           src={doprava}
-          alt="Foto uskupení dřevin"
+          alt="Foto dopravy"
           className="rounded-t-md object-cover group-hover:scale-110 transform duration-300"
           />
         </div>
