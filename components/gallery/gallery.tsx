@@ -13,7 +13,7 @@ const Gallery = () => {
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8'>
           {numbers.map(num => (
             <PhotoView key={num} src={`/gallery/capka${num}.webp`}>
-              <AspectRatio key={num} ratio={16 / 9} className='w-full group overflow-clip hover:cursor-pointer rounded-md'>
+              <AspectRatio key={num} ratio={16 / 9} className='w-full group overflow-clip hover:cursor-pointer rounded-md shadow-lg'>
                 <Image 
                 src={`/gallery/capka${num}.webp`}
                 alt="Ukázkové foto"
