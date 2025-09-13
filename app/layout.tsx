@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Palivo Sedláček | Prodej palivového dříví",
+  description: 'Jsme regionální firma zabývající se výrobou a prodejem zejména suchého kvalitního palivového dříví za přiznívé ceny. Nabízíme měkké a tvrdé listnaté dříví v délkách dle vašich požadavků. S výběrem ideálního druhu dřeva Vám rádi poradíme. Po telefonické domluvě Vás rádi uvítáme i mimo otevírací dobu.',
   authors: [{ name: 'Ondřej Berčík' }],
-  description: 'Palivo Sedláček - prodej palivového štípaného dřeva',
   keywords: 'prodej, palivové dříví, dříví, palivové dřevo, dřevo, topné dříví, topné dřevo, Kroměříž, štípané dříví, štípané dřevo, skládané dříví, skládané dřevo, tvrdé dříví, tvrdé dřevo, měkké dříví, měkké dřevo, paletované dříví, piliny, listaté dřevo, listnaté dříví, jasan, buk, dub, smrk, olše, lípa, bříza, kvalitní dříví, kvalitní dřevo, suché dříví, suché dřevo, metrové dříví, metrové dřevo, prm sypaný, prm skládaný'.split(', '),
   icons: {
     icon: '/metadata/favicon.ico',
