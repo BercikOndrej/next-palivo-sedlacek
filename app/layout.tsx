@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner"
 import Footer from "./Footer";
+import CheatAlertDialog from "@/components/cheat-alert-dialog";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +20,6 @@ export const metadata: Metadata = {
   authors: [{ name: 'Ondřej Berčík' }],
   description: 'Palivo Sedláček - prodej palivového štípaného dřeva',
   keywords: 'prodej, palivové dříví, dříví, palivové dřevo, dřevo, topné dříví, topné dřevo, Kroměříž, štípané dříví, štípané dřevo, skládané dříví, skládané dřevo, tvrdé dříví, tvrdé dřevo, měkké dříví, měkké dřevo, paletované dříví, piliny, listaté dřevo, listnaté dříví, jasan, buk, dub, smrk, olše, lípa, bříza, kvalitní dříví, kvalitní dřevo, suché dříví, suché dřevo, metrové dříví, metrové dřevo, prm sypaný, prm skládaný'.split(', '),
-  viewport: 'width=device-width, initial-scale=1',
   icons: {
     icon: '/metadata/favicon.ico',
     shortcut: '/metadata/favicon.ico'
@@ -51,6 +51,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
+        <CheatAlertDialog />
         <Toaster richColors closeButton position="top-center" />
         <Footer />
       </body> 
