@@ -5,6 +5,8 @@ type EmailBody = {
   surname: string,
   email: string,
   phone: string,
+  street: string,
+  city: string,
   subject: string,
   message: string
 }
@@ -30,14 +32,16 @@ export default async function sendEmail(body: EmailBody) {
 }
 
 const getPlainText = (body: EmailBody) => `
-  New Contact Form Submission
+  Nová zpráva pomocí web formuláře!
 
-  Name: ${body.name} ${body.surname}
-  Phone: ${body.phone}
+  Jméno: ${body.name} ${body.surname}
+  Tel. číslo: ${body.phone}
   Email: ${body.email}
-  Subject: ${body.subject}
+  Ulice: ${body.street}
+  Obec: ${body.city}
 
-  Message:
+  Předmět zprávy: ${body.subject}
+  zpráva:
   ${body.message}
 `;
 
@@ -93,6 +97,8 @@ const getHtmlTemplate = (body: EmailBody) => `
       <div class="info"><span class="label">Jméno:</span><span class="value">${body.name} ${body.surname}</span></div>
       <div class="info"><span class="label">Tel. číslo:</span><span class="value">${body.phone}</span></div>
       <div class="info"><span class="label">Email:</span><span class="value">${body.email}</span></div>
+      <div class="info"><span class="label">Ulice:</span><span class="value">${body.street}</span></div>
+      <div class="info"><span class="label">Obec:</span><span class="value">${body.city}</span></div>
       <div class="info"><span class="label">Předmět:</span><span class="value">${body.subject}</span></div>
 
       <div class="message-box">

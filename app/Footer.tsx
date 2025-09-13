@@ -9,7 +9,7 @@ const Footer = () => {
           <FaFacebookSquare size={36} />
         </Link>
         <div>PALIVOSEDLACEK.CZ</div>
-        <div>© 2025 Ondřej Berčík</div>
+        <div>© 2025 Mgr. Ondřej Berčík</div>
       </footer>
     </div>
   )

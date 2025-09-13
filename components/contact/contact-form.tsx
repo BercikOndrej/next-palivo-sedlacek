@@ -17,7 +17,7 @@ import { toast } from "sonner";
 import easyTranslate from "@/utils/easy-translate";
 
 const inputBgStyle = 'bg-gray-50';
-const flexStyle = 'flex flex-col gap-x-4 gap-y-8 sm:flex-row w-full'
+const flexStyle = 'flex flex-col gap-x-4 gap-y-4 sm:flex-row w-full'
 
 const ContactForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -27,6 +27,8 @@ const ContactForm = () => {
       surname: '',
       email: '',
       phone: '',
+      street: '',
+      city: '',
       subject: 'Poptávka',
       message: '',
       honeyPod: ''
@@ -62,10 +64,10 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-4">
       <h3 className="font-semibold text-2xl text-black">Kontaktujte nás</h3>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <div className={flexStyle}>
             <FormField
               control={form.control}
@@ -118,7 +120,30 @@ const ContactForm = () => {
               )}
             />
           </div>
-
+          <FormField
+            control={form.control}
+            name="street"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl className={inputBgStyle}>
+                  <Input placeholder="Ulice a číslo popisné" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+           <FormField
+            control={form.control}
+            name="city"
+            render={({ field }) => (
+              <FormItem>
+                <FormControl className={inputBgStyle}>
+                  <Input placeholder="Obec a PSČ" {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
           <FormField
             control={form.control}
             name="subject"
