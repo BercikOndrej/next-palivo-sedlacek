@@ -35,8 +35,8 @@ const PriceList = ({data}: Props) => {
         </CardHeader>
         <CardContent>
           <div className="w-full grid grid-cols-2 grid-rows-2 gap-4">
-            <span className="font-bold text-black col-1 row-1">Míra</span>
-            <span className="font-bold text-black col-2 row-1">Cena</span>
+            <span className="text-heading col-1 row-1 font-bold">Míra</span>
+            <span className="text-heading col-2 row-1 font-bold">Cena</span>
 
             <span className="row-2 col-1">1 prm</span>
             <span className="row-2 col-2">50 Kč</span>
@@ -59,8 +59,8 @@ const PriceList = ({data}: Props) => {
         </CardHeader>
         <CardContent>
           <div className="w-full grid grid-cols-2 grid-rows-2 gap-4">
-            <span className="font-bold text-black col-1 row-1">Míra</span>
-            <span className="font-bold text-black col-2 row-1">Cena</span>
+            <span className="text-heading col-1 row-1 font-bold">Míra</span>
+            <span className="text-heading col-2 row-1 font-bold">Cena</span>
 
             <span className="row-2 col-1">1 kus</span>
             <span className="row-2 col-2">400 Kč</span>
@@ -83,8 +83,8 @@ const PriceList = ({data}: Props) => {
         </CardHeader>
         <CardContent>
           <div className="w-full grid grid-cols-2 grid-rows-2 gap-4">
-            <span className="font-bold text-black col-1 row-1">Míra</span>
-            <span className="font-bold text-black col-2 row-1">Cena</span>
+            <span className="text-heading col-1 row-1 font-bold">Míra</span>
+            <span className="text-heading col-2 row-1 font-bold">Cena</span>
 
             <span className="row-2 col-1">1 km</span>
             <span className="row-2 col-2">30 Kč</span>
