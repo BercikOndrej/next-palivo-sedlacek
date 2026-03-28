@@ -15,12 +15,12 @@ const NavbarDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="sm:hidden ml-auto p-2 hover:bg-primary/30 rounded-lg hover:cursor-pointer duration-300">
+    <div className="rounded-lg p-2 transition-colors duration-300 hover:cursor-pointer hover:bg-primary/20 sm:hidden">
       <Drawer open={isOpen} onOpenChange={setIsOpen}>
         <DrawerTrigger asChild>
           <GiWoodenSign size={32} />
         </DrawerTrigger>
-        <DrawerContent className="items-center mb-4">
+        <DrawerContent className="mb-4 items-center bg-popover">
           <DrawerTitle className="m-4">Menu</DrawerTitle>
           <NavMenu onSelect={() => setIsOpen(false)} />
         </DrawerContent>

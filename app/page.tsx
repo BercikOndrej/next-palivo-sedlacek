@@ -9,7 +9,7 @@ export default function Home() {
     <Header />
     <AboutSection />
     <div className="w-full h-0.5 py-8 bg-bg-color">
-      <div className="border-b-2 border-text"></div>
+      <div className="border-b-2 border-border"></div>
     </div>
     <PriceListSection />
     <GallerySection />

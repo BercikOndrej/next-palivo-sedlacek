@@ -18,7 +18,7 @@ const CheatAlertDialog = () => {
     <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle className='text-black font-bold'>Upozornění pro zákazníky</AlertDialogTitle>
+          <AlertDialogTitle className='text-heading font-bold'>Upozornění pro zákazníky</AlertDialogTitle>
           <div className='space-y-2'>
             <p>
               Z důvodu výskytu podvodných praktik Vás žádáme, abyste pro online poptávky palivového dřeva využívali 

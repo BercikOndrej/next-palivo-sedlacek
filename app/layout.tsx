@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner"
 import Footer from "./Footer";
 import CheatAlertDialog from "@/components/cheat-alert-dialog";
+import ThemeProvider from "@/components/theme-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -44,16 +45,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="cs" className="scroll-smooth">
+    <html lang="cs" className="scroll-smooth" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gray-50`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-background text-foreground antialiased transition-colors duration-300`}
       >
-        <main>
-          {children}
-        </main>
-        <CheatAlertDialog />
-        <Toaster richColors closeButton position="top-center" />
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+          <main>
+            {children}
+          </main>
+          <CheatAlertDialog />
+          <Toaster richColors closeButton position="top-center" />
+          <Footer />
+        </ThemeProvider>
       </body> 
     </html>
   );

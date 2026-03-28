@@ -16,8 +16,8 @@ import { formSchema } from "@/utils/validation-schemas";
 import { toast } from "sonner";
 import easyTranslate from "@/utils/easy-translate";
 
-const inputBgStyle = 'bg-gray-50';
-const flexStyle = 'flex flex-col gap-x-4 gap-y-4 sm:flex-row w-full'
+const inputBgStyle = "bg-field";
+const flexStyle = "flex w-full flex-col gap-x-4 gap-y-4 sm:flex-row";
 
 const ContactForm = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -65,7 +65,7 @@ const ContactForm = () => {
 
   return (
     <div className="space-y-4">
-      <h3 className="font-semibold text-2xl text-black">Kontaktujte nás</h3>
+      <h3 className="text-heading text-2xl font-semibold">Kontaktujte nás</h3>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <div className={flexStyle}>
