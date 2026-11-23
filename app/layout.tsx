@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner"
 import Footer from "./Footer";
 import CheatAlertDialog from "@/components/cheat-alert-dialog";
 import ThemeProvider from "@/components/theme-provider";
@@ -54,7 +53,6 @@ export default function RootLayout({
             {children}
           </main>
           <CheatAlertDialog />
-          <Toaster richColors closeButton position="top-center" />
           <Footer />
         </ThemeProvider>
       </body> 

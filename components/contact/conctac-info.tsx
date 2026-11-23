@@ -12,7 +12,7 @@ const ConctactInfo = () => {
   return (
     <div className='flex flex-col justify-between gap-8'>
       <div>
-        Potřebujete pomoci s výběrem, nebo se zeptat na naší aktuální nabídku? Zavolejte nám nebo nás kontaktujte pomocí formuláře, rádi Vám poradíme a zodpovíme Vaše dotazy.
+        Potřebujete pomoci s výběrem, nebo se zeptat na naší aktuální nabídku? Zavolejte nám nebo nám napište e-mail, rádi Vám poradíme a zodpovíme Vaše dotazy.
       </div>
       
       <div className='space-y-8'>
